@@ -26,5 +26,8 @@ public class FirstSample {
         final int vacationDays = 12;
         //vacationDays = 13;
         System.out.println(vacationDays);
+        boolean flag = false;
+        System.out.println(flag);
     }
 }
+
