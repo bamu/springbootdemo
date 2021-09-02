@@ -1,3 +1,4 @@
+package main.java;
 public class FirstSample {
     public static void main(String[] args){
         System.out.println("hello");
@@ -29,6 +30,19 @@ public class FirstSample {
         //
         boolean flag = false;
         System.out.println(flag);
+        //java创建一个容量为十的数组和创建十个容量为一的数组，哪个占内存更大？
+        int[] array1 = {1};
+        int[] array2=new int[10];
+        for (int i = 0; i < 10; i++) {
+            array2[i]=i;
+        }
+        //System.out.println(ClassLayout.parseInstance(array1).toPrintable());//Instance size: 24 bytes
+        //System.out.println(ClassLayout.parseInstance(array2).toPrintable());//Instance size: 56 bytes
+        System.out.println(array1[1]);
+        for (int i = 0; i< array2.length; i++){
+            System.out.println(array2[i]);
+        }
+
     }
 }
 
