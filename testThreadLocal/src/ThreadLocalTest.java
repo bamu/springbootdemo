@@ -49,6 +49,14 @@ public class ThreadLocalTest {
                 System.out.println("after 4 remove : "+localVar.get());
             }
         });
+        Thread t5 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                localVar.set("localVar5");
+                print("thread5");
+                System.out.println("after 5 remove : "+localVar.get());
+            }
+        });
         t1.start();
         t2.start();
         t3.start();
